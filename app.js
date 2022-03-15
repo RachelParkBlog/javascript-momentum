@@ -4,13 +4,27 @@ const 제목 = document.querySelector("#title");
 title.innerText = "Good Morning!";
 
 const text = document.getElementsByClassName("text");
-console.log(text);
 
 // className, tagName은 배열을 반환한다.
 // querySelector는 단 하나의 요소만 가져온다.
 
 function handleTitleClick() {
-  title.style.color = "green";
+  //className으 getter이자 setter이다
+  //첫번째방법
+  //   if (title.className === "active") {
+  //     title.className == "";
+  //   } else {
+  //     title.className = "active";
+  //   }
+
+  //두번째방법
+  //const clickedClass = "clicked";
+  //   if (title.classList.contains(clickedClass)) {
+  //     title.classList.remove(clickedClass);
+  //   } else {
+  //     title.classList.add(clickedClass);
+  //   }
+  title.classList.toggle("active");
 }
 
 function handleMouseEnter() {

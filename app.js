@@ -24,6 +24,8 @@ function handleTitleClick() {
   //   } else {
   //     title.classList.add(clickedClass);
   //   }
+
+  //세번째 방법
   title.classList.toggle("active");
 }
 

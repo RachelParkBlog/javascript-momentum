@@ -23,6 +23,9 @@ const savedUsername = localStorage.getItem(USERNAME_KEY);
 if (!savedUsername) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", onLoginSubmit);
+  //로컬스토리지에 username이 저장되어 있지않은 경우
+  //form을보이게하고 -> form에서 username정보를 input value값으로 받아서 로컬 스토리지에 새롭게 저장한다.
 } else {
   paintGreetings(savedUsername);
+  //
 }

@@ -1,20 +1,28 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
+const h1 = document.querySelector("h1");
 
-const link = document.querySelector("a");
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username;";
 
-loginForm.addEventListener("submit", onLoginBtnClick);
-link.addEventListener("click", handleLinkClick);
-
-function onLoginBtnClick(e) {
-  e.preventDefault();
-  //어떤 이벤트든 default behavior(브라우저가 기본적으로 수행하는 동작) 실행이 되지 않도록 막는 기능
+function onLoginSubmit(event) {
+  event.preventDefault();
+  loginForm.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
-  console.log(username);
+  localStorage.setItem(USERNAME_KEY, username);
+  paintGreetings(username);
 }
 
-function handleLinkClick(e) {
-  e.preventDefault();
-  console.log(e);
-  alert("가라");
+function paintGreetings(username) {
+  h1.innerText = `Hello ${username}! `;
+  h1.classList.remove(HIDDEN_CLASSNAME);
+}
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+
+if (!savedUsername) {
+  loginForm.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.addEventListener("submit", onLoginSubmit);
+} else {
+  paintGreetings(savedUsername);
 }

@@ -8,7 +8,20 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: url("/images/default-background.jpg") no-repeat 100%/100%;
+}
+
+#todo-form {
+  position: absolute;
+  right: 5%;
+  bottom: 40%;
+  z-index: 3;
+}
+
+#todo-list {
+  position: absolute;
+  right: 5%;
+  bottom: 30%;
+  z-index: 4;
 }
 
 #clock {
@@ -42,7 +55,6 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
 }
 
 .hidden {

@@ -3,5 +3,6 @@ function changeBackgroundImgs() {
   bgImages.src = `https://source.unsplash.com/1920x1200?landscape`;
   document.body.appendChild(bgImages);
 }
+
 changeBackgroundImgs();
-setInterval(changeBackgroundImgs, 10000);
+setInterval(changeBackgroundImgs, 50000);

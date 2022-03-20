@@ -5,7 +5,7 @@ const toDoList = document.getElementById("todo-list");
 function removeToDoList(event) {
   //console.dir(event.target); //클릭된 html element (button태그)
   const li = event.target.parentElement; //element의 부모, 즉 클릭한 버튼의 부모요소인 li를 의미함
-  toDoList.removeChild(li);
+  li.remove();
 }
 
 function paintToDo(newTodoList) {

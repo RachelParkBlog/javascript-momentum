@@ -17,8 +17,23 @@
       <button>Log In</button>
     </form>
     <h1 id="gretting" class="hidden"></h1>
-    <h2 id="clock">00:00</h2>
-    <script src="gretting.js"></script>
-    <script src="clock.js"></script>
+    <form id="todo-form">
+      <input
+        type="text"
+        placeholder="오늘의 할 일 적어주세요. 그리고 엔터를 누르세요."
+        required
+      />
+    </form>
+    <ul id="todo-list"></ul>
+    <h2 id="clock">00:00:00</h2>
+    <div id="quote">
+      <p></p>
+      <p></p>
+    </div>
+    <script src="./js/gretting.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/quotes.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/todo.js"></script>
   </body>
 </html>

@@ -1,3 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url("/images/default-background.jpg") no-repeat 100%/100%;
+}
+
+#clock {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #efefef;
+  font-size: 4.5rem;
+  text-shadow: 1px 1px 10px rgb(163, 163, 163);
+}
+
+#quote {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  z-index: 4;
+  color: #e4e4e4;
+}
+
+#quote p {
+  font-size: 1.25rem;
+  text-align: center;
+  text-shadow: 1px 1px 10px rgb(163, 163, 163);
+}
+
+img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .hidden {
   display: none;
 }

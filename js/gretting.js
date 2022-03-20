@@ -27,5 +27,4 @@ if (!savedUsername) {
   //form을보이게하고 -> form에서 username정보를 input value값으로 받아서 로컬 스토리지에 새롭게 저장한다.
 } else {
   paintGreetings(savedUsername);
-  //
 }

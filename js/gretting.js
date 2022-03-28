@@ -3,7 +3,7 @@ const loginInput = document.querySelector("#login-form input");
 const gretting = document.querySelector("#gretting");
 
 const HIDDEN_CLASSNAME = "hidden";
-const USERNAME_KEY = "username;";
+const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
   event.preventDefault();

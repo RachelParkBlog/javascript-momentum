@@ -9,10 +9,12 @@ function saveToDos() {
   localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); //toDos array를 local storage 안에 집어넣기
 }
 
-function removeToDoList(event) {
+function removeToDoList(event, id) {
   //console.dir(event.target); //클릭된 html element (button태그)
   const li = event.target.parentElement; //element의 부모, 즉 클릭한 버튼의 부모요소인 li를 의미함
-  if (li.id === newTodo.id) li.remove();
+  li.remove();
+  toDos = toDos.filter((todo) => todo.id !== parseInt(li.id));
+  saveToDos();
 }
 
 function paintToDo(newTodo) {
@@ -49,5 +51,5 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 if (savedToDos) {
   const parsedToDos = JSON.parse(savedToDos);
   toDos = parsedToDos; //toDos에 parseToDos를 넣어서 원래 있던 toDos들이 없어지지 않도록 하기
-  parsedToDos.forEach(paintToDo);
+  parsedToDos.forEach(paintToDo); // 여기서 forEach 함수는 paintToDo를 parsedToDos의 배열 요소마다 실행한다.
 }

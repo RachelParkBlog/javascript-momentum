@@ -1,3 +1,5 @@
+@import url(font.css);
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +10,8 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+
+  font-family: "SpoqaHanSansNeo-Medium";
 }
 
 #todo-form {
@@ -55,6 +59,12 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+#weather {
+  position: absolute;
+  z-index: 5;
+  color: #efefef;
 }
 
 .hidden {

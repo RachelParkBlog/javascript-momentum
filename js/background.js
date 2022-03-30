@@ -5,4 +5,4 @@ function changeBackgroundImgs() {
 }
 
 changeBackgroundImgs();
-setInterval(changeBackgroundImgs, 50000);
+setInterval(changeBackgroundImgs, 70000);

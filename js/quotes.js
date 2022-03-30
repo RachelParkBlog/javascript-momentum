@@ -52,7 +52,7 @@ function todayQutoes() {
   let i = Math.floor(Math.random() * quotes.length);
 
   quote.innerText = quotes[i].quote;
-  author.innerText = quotes[i].author;
+  author.innerText = `- ${quotes[i].author} -`;
 }
 
 todayQutoes();

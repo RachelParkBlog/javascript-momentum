@@ -1,5 +1,7 @@
-require("dotenv").config();
+import DotenvModule from "dotenv";
+doteDotenvModulenv.config();
 const api = process.env.API_KEY;
+
 const weather = document.querySelector("#weather");
 const city = document.querySelector("#weather span:first-child");
 
